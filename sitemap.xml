@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yourdomain.com/</loc>
+    <loc>https://arbind-portfolio.pages.dev/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/services.html</loc>
+    <loc>https://arbind-portfolio.pages.dev/services.html</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/projects.html</loc>
+    <loc>https://arbind-portfolio.pages.dev/projects.html</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/process.html</loc>
+    <loc>https://arbind-portfolio.pages.dev/process.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/about.html</loc>
+    <loc>https://arbind-portfolio.pages.dev/about.html</loc>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/contact.html</loc>
+    <loc>https://arbind-portfolio.pages.dev/contact.html</loc>
     <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/projects/data-cleaning.html</loc>
+    <loc>https://arbind-portfolio.pages.dev/projects/data-cleaning.html</loc>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/projects/sales-dashboard.html</loc>
+    <loc>https://arbind-portfolio.pages.dev/projects/sales-dashboard.html</loc>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://yourdomain.com/projects/retail-analysis.html</loc>
+    <loc>https://arbind-portfolio.pages.dev/projects/retail-analysis.html</loc>
     <priority>0.85</priority>
   </url>
 </urlset>
