@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selected Work & Case Studies | Arbind Muraw</title>
+  <meta name="description" content="Explore data engineering, cleaning pipelines, fraud detection modeling, and analytics dashboards built by Arbind Muraw.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Home">
+        <span class="brand-icon">A</span>
+        <span>Arbind Muraw</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="process.html" class="nav-link">How I Work</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle theme" title="Toggle dark/light theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary btn-sm">Start a Project</a>
+
+        <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg class="icon-menu-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-menu-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="section-compact" style="background-color: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+      <div class="container text-center">
+        <span class="caption-tag reveal">Portfolio Showcase</span>
+        <h1 class="page-title reveal delay-1">Selected Work</h1>
+        <p class="section-subtitle reveal delay-2">
+          Demonstrations of automated data cleaning pipelines, business intelligence dashboards, and machine learning preprocessing models.
+        </p>
+
+        <!-- Category Filter Buttons -->
+        <div class="flex-center reveal delay-3" style="gap: 0.5rem; margin-top: 2rem; flex-wrap: wrap;">
+          <button class="btn btn-primary btn-sm filter-btn active" data-filter="all">All Projects</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="cleaning">Data Cleaning & Automation</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="dashboard">Dashboards & BI</button>
+          <button class="btn btn-secondary btn-sm filter-btn" data-filter="analytics">Data Analytics & ML</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS GRID -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-3" id="projectsContainer">
+          
+          <!-- PROJECT 01 -->
+          <div class="project-card project-grid-item reveal" data-category="cleaning">
+            <div class="project-preview">
+              <div class="mockup-window" style="max-width: 280px;">
+                <div class="mockup-header">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                </div>
+                <div class="mockup-body" style="font-family: var(--font-mono); font-size: 0.7rem; line-height: 1.5;">
+                  <div style="color: var(--accent-primary); font-weight: 600;">[Pipeline] Raw CSV -> Clean</div>
+                  <div style="color: var(--success);">&#x2713; 1,420 Duplicates Removed</div>
+                  <div style="color: var(--success);">&#x2713; Date Formats ISO-8601</div>
+                  <div style="color: var(--text-muted);">&#x2713; 100% Validated Records</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-type-row">
+                <span class="project-category">Data Pipeline & Automation</span>
+                <span class="portfolio-tag">Personal Project</span>
+              </div>
+              <h2 class="project-name">Data Cleaning & Automation Tool</h2>
+              <p class="project-description">
+                Python-based modular tool that automates deduplication, null-handling, format standardization, and data validation for business spreadsheets.
+              </p>
+              
+              <div class="tech-stack-list">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">NumPy</span>
+                <span class="tech-badge">Excel</span>
+                <span class="tech-badge">CSV</span>
+              </div>
+
+              <div class="project-card-actions">
+                <a href="projects/data-cleaning.html" class="btn btn-primary btn-sm" style="flex: 1;">View Case Study</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 02 -->
+          <div class="project-card project-grid-item reveal delay-1" data-category="dashboard">
+            <div class="project-preview">
+              <div class="mockup-window" style="max-width: 280px;">
+                <div class="mockup-header">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                </div>
+                <div class="mockup-body">
+                  <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <div style="background: var(--accent-light); padding: 4px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; color: var(--accent-primary);">$148.5K Rev</div>
+                    <div style="background: var(--success-light); padding: 4px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 700; color: var(--success);">+18.4% MoM</div>
+                  </div>
+                  <div style="height: 45px; display: flex; align-items: flex-end; gap: 6px; padding-top: 5px;">
+                    <div style="flex:1; background: var(--accent-primary); height: 40%; border-radius: 2px;"></div>
+                    <div style="flex:1; background: var(--accent-primary); height: 65%; border-radius: 2px;"></div>
+                    <div style="flex:1; background: var(--accent-primary); height: 50%; border-radius: 2px;"></div>
+                    <div style="flex:1; background: var(--accent-primary); height: 85%; border-radius: 2px;"></div>
+                    <div style="flex:1; background: var(--accent-primary); height: 100%; border-radius: 2px;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-type-row">
+                <span class="project-category">Business Intelligence</span>
+                <span class="portfolio-tag">Personal Project</span>
+              </div>
+              <h2 class="project-name">Sales Intelligence Dashboard</h2>
+              <p class="project-description">
+                Interactive web dashboard for visualizing revenue drivers, product category margins, sales trends, and territory distribution.
+              </p>
+              
+              <div class="tech-stack-list">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">Plotly</span>
+                <span class="tech-badge">Dash</span>
+              </div>
+
+              <div class="project-card-actions">
+                <a href="projects/sales-dashboard.html" class="btn btn-primary btn-sm" style="flex: 1;">View Case Study</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 03 -->
+          <div class="project-card project-grid-item reveal delay-2" data-category="analytics">
+            <div class="project-preview">
+              <div class="mockup-window" style="max-width: 280px;">
+                <div class="mockup-header">
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                  <span class="mockup-dot"></span>
+                </div>
+                <div class="mockup-body" style="font-family: var(--font-mono); font-size: 0.7rem;">
+                  <div style="color: var(--text-muted); margin-bottom: 4px;">SQL> SELECT category, SUM(sales)</div>
+                  <div style="color: var(--text-primary); font-weight: 600;">1. Electronics: $340,200</div>
+                  <div style="color: var(--text-primary); font-weight: 600;">2. Apparel: $184,500</div>
+                  <div style="color: var(--accent-primary); margin-top: 4px;">High repeat purchase: 42%</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-type-row">
+                <span class="project-category">Data Analytics</span>
+                <span class="portfolio-tag">Personal Project</span>
+              </div>
+              <h2 class="project-name">Retail Data Analysis</h2>
+              <p class="project-description">
+                Exploratory data analysis identifying consumer purchasing habits, seasonal sales spikes, and inventory stock efficiency.
+              </p>
+              
+              <div class="tech-stack-list">
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">Pandas</span>
+                <span class="tech-badge">SQL</span>
+                <span class="tech-badge">Plotly</span>
+              </div>
+
+              <div class="project-card-actions">
+                <a href="projects/retail-analysis.html" class="btn btn-primary btn-sm" style="flex: 1;">View Case Study</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section" style="border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="cta-card reveal">
+          <h2 class="cta-title">Have a data problem? Let's solve it.</h2>
+          <p class="cta-text">Tell me what you're working with and what you need to achieve.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-icon">A</span>
+            <span>Arbind Muraw</span>
+          </div>
+          <p>Data & Automation Specialist helping businesses clean, organize, analyze and automate datasets with Python, SQL & modern dashboards.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Data Cleaning</a>
+            <a href="services.html" class="footer-link">Data Analysis</a>
+            <a href="services.html" class="footer-link">Automation</a>
+            <a href="services.html" class="footer-link">Dashboards</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <div class="footer-links">
+            <a href="services.html" class="footer-link">Services</a>
+            <a href="projects.html" class="footer-link">Projects</a>
+            <a href="process.html" class="footer-link">How I Work</a>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Connect</div>
+          <div class="footer-links">
+            <a href="https://github.com/arbind968-hash" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub (arbind968-hash)</a>
+            <a href="https://linkedin.com/in/arbind-muraw-09468b294/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn Profile</a>
+            <a href="mailto:mauryaarbind968@gmail.com" class="footer-link">mauryaarbind968@gmail.com</a>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Haryana, Ambala, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Arbind Muraw · Data & Automation Specialist. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="privacy.html" class="footer-link">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: Data Cleaning & Automation Tool | Data & Automation</title>
+  <meta name="description" content="Technical case study of an automated Python data cleaning pipeline handling deduplication, missing values, and record standardization.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo" aria-label="Home">
+        <span class="brand-icon">A</span>
+        <span>Arbind Muraw</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+        <a href="../services.html" class="nav-link">Services</a>
+        <a href="../projects.html" class="nav-link active">Projects</a>
+        <a href="../process.html" class="nav-link">How I Work</a>
+        <a href="../about.html" class="nav-link">About</a>
+        <a href="../contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="btn-icon theme-toggle-btn" aria-label="Toggle theme" title="Toggle dark/light theme">
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <a href="../contact.html" class="btn btn-primary btn-sm">Start a Project</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+          <svg class="icon-menu-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+          <svg class="icon-menu-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 01 — PROJECT HEADER -->
+    <section class="case-hero">
+      <div class="container container-narrow">
+        <div style="margin-bottom: 1rem;">
+          <a href="../projects.html" style="font-size: 0.875rem; color: var(--accent-primary); font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem;">
+            ← Back to All Projects
+          </a>
+        </div>
+        
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+          <span class="portfolio-tag">Personal Portfolio Project</span>
+          <span class="tag-badge">Data Engineering</span>
+        </div>
+
+        <h1 class="page-title">Data Cleaning & Automation Tool</h1>
+        
+        <div class="tech-stack-list" style="margin-top: 1rem; margin-bottom: 1.5rem;">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">NumPy</span>
+          <span class="tech-badge">Excel</span>
+          <span class="tech-badge">CSV</span>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://github.com/arbind968-hash" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            View on GitHub
+          </a>
+          <a href="../contact.html" class="btn btn-primary btn-sm">Discuss a Similar Project</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container container-narrow">
+      
+      <!-- 02 — OVERVIEW -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">02</span> Overview</h2>
+        <p style="color: var(--text-secondary); font-size: 1.05rem;">
+          This project is an automated data processing engine engineered to ingest messy, non-standard business spreadsheets and output clean, verified datasets. It replaces repetitive manual spreadsheet sanitization with repeatable, validated Python transformation pipelines.
+        </p>
+      </section>
+
+      <!-- 03 — PROBLEM -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">03</span> The Problem</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+          Raw spreadsheet files exported from legacy CRMs and external vendors often contain duplicates, missing values, inconsistent formatting (such as multiple date representations like DD/MM/YYYY vs MM-DD-YY), and invalid text strings.
+        </p>
+        <div style="background: var(--bg-tertiary); padding: 1.25rem; border-left: 3px solid #EF4444; border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 0.9375rem; color: var(--text-secondary);">
+          <strong>Business impact:</strong> Attempting to analyze uncleaned datasets directly leads to skewed calculation totals, inaccurate dashboard metrics, and wasted engineering hours spent manually editing CSV cells.
+        </div>
+      </section>
+
+      <!-- 04 — SOLUTION -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">04</span> The Solution</h2>
+        <p style="color: var(--text-secondary);">
+          I developed a modular Python script and processing workflow that scans raw input files, executes targeted sanitization rules (fuzzy matching for duplicates, regex-based phone/date normalization, and rule-based missing value handling), and exports clean datasets alongside a detailed transformation audit log.
+        </p>
+      </section>
+
+      <!-- 05 — WORKFLOW -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">05</span> Data Pipeline Workflow</h2>
+        <div class="workflow-diagram">
+          <div class="workflow-node">01. Upload CSV/XLSX</div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-node">02. Schema Validation</div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-node">03. Clean & Deduplicate</div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-node">04. Format Normalization</div>
+          <div class="workflow-arrow">→</div>
+          <div class="workflow-node">05. Export Clean Dataset</div>
+        </div>
+      </section>
+
+      <!-- 06 — FEATURES -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">06</span> Key Features</h2>
+        <div class="grid-2" style="gap: 1.25rem;">
+          <div class="card" style="padding: 1.25rem;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Smart Deduplication</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Detects and purges both exact duplicate rows and fuzzy matching customer records based on primary identifiers.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Date & Time Normalization</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Parses heterogeneous date formats automatically into standard ISO-8601 (YYYY-MM-DD).</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Missing Value Imputation</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Handles null values through domain-specific median, mode, or placeholder substitution without data loss.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">String & Case Cleaning</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Strips leading/trailing whitespace, invisible unicode symbols, and enforces title/uppercase standards.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Audit & Error Logging</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Generates a summary log specifying exactly how many records were modified, dropped, or flagged.</p>
+          </div>
+          <div class="card" style="padding: 1.25rem;">
+            <h3 style="font-size: 1rem; margin-bottom: 0.35rem;">Multi-format Export</h3>
+            <p style="font-size: 0.875rem; color: var(--text-secondary);">Exports analysis-ready files in `.xlsx`, `.csv`, or SQLite format with preserved column types.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 — TECHNICAL ARCHITECTURE -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">07</span> Technical Architecture</h2>
+        <div class="architecture-box">
+          <div class="code-mock">
+Input (Raw CSV/Excel) 
+   │
+   ▼
+[Ingestion Layer] ── Pandas Dataframe Ingestion & Schema Sniffing
+   │
+   ▼
+[Cleaning Pipeline]
+   ├── Step A: Whitespace & Encoding Sanitization
+   ├── Step B: Deduplication on (Customer_ID, Timestamp)
+   ├── Step C: Regex Pattern Matcher (Email, Phone, Dates)
+   └── Step D: Null Strategy Applicator
+   │
+   ▼
+[Validation Gate] ── Pandera / Assertions (Null % &lt; 0.01, Correct Types)
+   │
+   ▼
+Output (Clean File + JSON Audit Summary)
+          </div>
+        </div>
+      </section>
+
+      <!-- 08 — SCREENSHOTS / VISUAL PREVIEW -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">08</span> Output Demonstration</h2>
+        <div class="card" style="background: var(--bg-tertiary); padding: 1.5rem;">
+          <div class="mockup-window">
+            <div class="mockup-header">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span style="font-size: 0.75rem; color: var(--text-muted); margin-left: 10px;">pipeline_audit_summary.log</span>
+            </div>
+            <div class="mockup-body code-mock" style="margin:0; border:none;">
+[INFO] Processing dataset: raw_sales_transactions_2025.csv
+[INFO] Total records ingested: 25,480
+[SUCCESS] Dropped 1,420 exact duplicate rows.
+[SUCCESS] Standardized 3,110 date cells into ISO-8601 format.
+[SUCCESS] Imputed 412 missing 'Unit_Cost' values using product category medians.
+[SUCCESS] 100% records passed type and constraint verification.
+[OUTPUT] Clean dataset saved to /output/clean_sales_transactions_2025.xlsx
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 — CHALLENGES & SOLUTIONS -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">09</span> Challenges & Solutions</h2>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 1.25rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 700; color: #EF4444; margin-bottom: 0.35rem;">Challenge: Ambiguous date representations (e.g., 04/05/2024 vs 05/04/2024)</div>
+            <div style="color: var(--text-secondary); font-size: 0.9375rem;">
+              <strong>Solution:</strong> Built an automated locale and delimiter detector that samples the entire date column to establish consistent day/month patterns before executing conversion.
+            </div>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); padding: 1.25rem; border-radius: var(--radius-md);">
+            <div style="font-weight: 700; color: #EF4444; margin-bottom: 0.35rem;">Challenge: Memory consumption when loading large 500MB+ CSV files</div>
+            <div style="color: var(--text-secondary); font-size: 0.9375rem;">
+              <strong>Solution:</strong> Implemented chunk-based processing (`chunksize=10000`) in Pandas to streamline memory overhead and prevent out-of-memory crashes.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 — RESULTS -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">10</span> Results & Impact</h2>
+        <div class="card" style="background: var(--bg-card); border-left: 4px solid var(--success);">
+          <p style="color: var(--text-primary); font-weight: 600; font-size: 1.05rem; margin-bottom: 0.5rem;">
+            Automates repetitive data-cleaning operations and produces a standardized dataset ready for downstream analysis.
+          </p>
+          <p style="color: var(--text-secondary); font-size: 0.9375rem;">
+            Ensures zero formula calculation errors caused by corrupted spreadsheet inputs and establishes a consistent, reproducible pipeline for weekly data updates.
+          </p>
+        </div>
+      </section>
+
+      <!-- 11 — FUTURE IMPROVEMENTS -->
+      <section class="case-section">
+        <h2 class="case-section-title"><span class="case-section-num">11</span> Future Improvements</h2>
+        <ul style="list-style: disc; padding-left: 1.5rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
+          <li>Direct PostgreSQL and MySQL database connection drivers for automated table syncs.</li>
+          <li>Cloud scheduled cron execution via AWS Lambda or GitHub Actions.</li>
+          <li>Web-based drag-and-drop user interface for non-technical team members.</li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <div style="padding: 3rem 0; text-align: center;">
+        <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Have a dataset that needs cleaning or automation?</h3>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <span class="brand-icon">A</span>
+            <span>Arbind Muraw</span>
+          </div>
+          <p>Data & Automation Specialist helping businesses clean, organize, analyze and automate datasets with Python, SQL & modern dashboards.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Services</div>
+          <div class="footer-links">
+            <a href="../services.html#cleaning" class="footer-link">Data Cleaning</a>
+            <a href="../services.html#analysis" class="footer-link">Data Analysis</a>
+            <a href="../services.html#automation" class="footer-link">Automation</a>
+            <a href="../services.html#dashboards" class="footer-link">Dashboards</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Navigation</div>
+          <div class="footer-links">
+            <a href="../services.html" class="footer-link">Services</a>
+            <a href="../projects.html" class="footer-link">Projects</a>
+            <a href="../process.html" class="footer-link">How I Work</a>
+            <a href="../about.html" class="footer-link">About</a>
+            <a href="../contact.html" class="footer-link">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Connect</div>
+          <div class="footer-links">
+            <a href="https://github.com/arbind968-hash" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub (arbind968-hash)</a>
+            <a href="https://linkedin.com/in/arbind-muraw-09468b294/" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn Profile</a>
+            <a href="mailto:mauryaarbind968@gmail.com" class="footer-link">mauryaarbind968@gmail.com</a>
+            <span style="font-size: 0.85rem; color: var(--text-muted);">Haryana, Ambala, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Arbind Muraw · Data & Automation Specialist. All rights reserved.</div>
+        <div class="footer-legal">
+          <a href="../privacy.html" class="footer-link">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/animations.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
