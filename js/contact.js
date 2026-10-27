@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate sending state
+      // Sending state
       const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = `
@@ -36,15 +36,38 @@ document.addEventListener('DOMContentLoaded', () => {
           <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/>
           <path d="M12 2a10 10 0 0 1 10 10" />
         </svg>
-        Sending inquiry...
+        <span>Sending inquiry...</span>
       `;
 
-      setTimeout(() => {
+      // Submit form data to FormSubmit
+      const formData = new FormData(contactForm);
+
+      fetch('https://formsubmit.co/ajax/murawarbind968@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-        contactForm.reset();
-        showToast('Thank you! Your project inquiry has been received. I will reply within 24 hours.', 'success');
-      }, 1000);
+
+        if (data.success === 'true' || data.success === true) {
+          contactForm.reset();
+          showToast('Thank you! Your project inquiry has been sent to Arbind. I will reply to your email within 24 hours.', 'success');
+        } else {
+          showToast('Inquiry sent! If this is your first submission, please verify your email.', 'success');
+          contactForm.reset();
+        }
+      })
+      .catch(error => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        console.error('Submission error:', error);
+        showToast('Could not send automatically. Please reach out directly at murawarbind968@gmail.com', 'error');
+      });
     });
   }
 });
